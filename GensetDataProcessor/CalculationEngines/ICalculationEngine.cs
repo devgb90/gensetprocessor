@@ -2,8 +2,16 @@
 
 namespace GensetDataProcessor.CalculationEngines
 {
-    internal interface ICalculationEngine
+    /// <summary>
+    /// Interface for calculation implementations
+    /// </summary>
+    public interface ICalculationEngine
     {
-        GenerationOutput Calculate(GenerationReport generationReport);
+        /// <summary>
+        /// Perform calculations and create output
+        /// </summary>
+        /// <param name="generationReport"></param>
+        /// <returns></returns>
+        GenerationOutput Calculate(GenerationInput generationReport);
     }
 }

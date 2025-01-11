@@ -3,7 +3,7 @@
 namespace GensetDataProcessor.Models
 {
     [XmlRoot("GenerationReport")]
-    public class GenerationReport
+    public class GenerationInput
     {
         public Wind Wind { get; set; }
         public Gas Gas { get; set; }

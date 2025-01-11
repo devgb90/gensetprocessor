@@ -4,6 +4,9 @@ using Microsoft.Extensions.Configuration;
 
 namespace GensetDataProcessor
 {
+    /// <summary>
+    /// Provides reference data
+    /// </summary>
     public class ReferenceDataProvider
     {
         private readonly IInputParser inputParser;
@@ -18,6 +21,7 @@ namespace GensetDataProcessor
 
         public async Task<MappedFactors> GetReferenceDataAsync()
         {
+            // Read and parse file only when Mapped Factors are not yet calculated
             if (this.mappedFactors == null)
             {
                 var refDataFilePath = this.configuration.GetValue<string>("ReferenceDataFilePath");

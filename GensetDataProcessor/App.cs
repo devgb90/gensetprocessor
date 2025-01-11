@@ -4,6 +4,9 @@ using Microsoft.Extensions.Logging;
 
 namespace GensetDataProcessor
 {
+    /// <summary>
+    /// The main application
+    /// </summary>
     public class App
     {
         private readonly IConfiguration configuration;
